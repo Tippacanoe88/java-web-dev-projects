@@ -1,3 +1,6 @@
+import org.w3c.dom.ls.LSOutput;
+import static java.lang.System.*;
+
 public class HouseCat extends Cat {
     private String name;
     private String species = "Felis catus";
@@ -6,6 +9,14 @@ public class HouseCat extends Cat {
         super(aWeight);
         name = aName;
     }
+
+    public HouseCat(String aName) {
+        name = aName;
+    }
+
+    public HouseCat tonyTheTiger = new HouseCat("Tony the Tiger", 345);
+    tonyTheTiger.eat();
+    System.out.printIn(tonyTheTiger.isTired());
 
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
